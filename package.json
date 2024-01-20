@@ -38,6 +38,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"chart.js": "^4.4.1"
+		"chart.js": "^4.4.1",
+		"svelte-local-storage-store": "^0.6.4"
 	}
 }
