@@ -137,10 +137,9 @@
       <canvas bind:this={linechart}></canvas>
     </div>
 
-
     <!-- Third item -->
     <div class="col-span-2 bg-white shadow-lg rounded-2xl flex justify-center items-center" style="height: 100%;">
-       <canvas bind:this={polarAreaChart} id="myChart"></canvas>
+       <canvas bind:this={polarAreaChart}></canvas>
     </div>
   </div>
 </main>

@@ -1,0 +1,41 @@
+{
+    "settings": "Settings",
+    "logout": "Log Out",
+
+    "overview": "Overview",
+    "area": "Area Insights",
+    "traffic": "Traffic",
+    "store": "Store",
+    "help": "Help",
+
+    "page not found": "Page not found",
+
+    "users": "Users",
+    "users per period": "Users Per Period",
+    "comparison of usage": "Comparison of usage with network Users OPAP Store App",
+    "low rank": "You are in the lowest ranking in minutes of use",
+    "app users": "Today's App Users",
+    "compare users": "Compare users with network Users OPAP Store App",
+    "average usage": "Average usage Duration of usage OPAP Store App",
+    "hh:mm": "Hours : Minutes",
+
+    "visitors today": "Visitors Today",
+    "visitor last week": "Visitors of the corresponding day of the previous week",
+    "visitors per period": "Visitors per selected period",
+    "popular day": "Most popular day",
+    "wednesday": "Wednesday",
+    "number of visitors": "Maximum number of visitors per hour",
+
+    "unique users": "OPAP Store App Users Unique Users",
+    "total usage": "OPAP Store App Usage Time - Total Usage Time",
+    "average usage time": "Opap Store App Average Usage Time - Average Usage",
+    "bluetooth devices": "Bluetooth Devices",
+    "date of last use": "Date of last use",
+    "store code": "Store Code",
+    "device number": "Device Number Store Info",
+    "floors": "No. of Floors Store Information",
+    "store info": "Bespot Service Store Information",
+    "active": "Active",
+    "hours": "Hours",
+    "floor": "Floor(s)"
+}

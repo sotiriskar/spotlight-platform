@@ -1,0 +1,41 @@
+{
+    "settings": "Ρυθμίσεις",
+    "logout": "Αποσύνδεση",
+
+    "overview": "Επισκόπηση",
+    "area": "Περιοχές",
+    "traffic": "Κίνηση",
+    "store": "Κατάστημα",
+    "help": "Βοήθεια",
+
+    "page not found": "Η σελίδα δεν βρέθηκε",
+
+    "users": "Χρήστες",
+    "users per period": "Χρήστες ανά περίοδο",
+    "comparison of usage": "Σύγκριση χρήσης με τους χρήστες του δικτύου OPAP Store App",
+    "low rank": "Βρίσκεστε στη χαμηλότερη κατάταξη σε λεπτά χρήσης",
+    "app users": "Χρήστες της εφαρμογής σήμερα",
+    "compare users": "Σύγκριση χρήστων μεταξύ δικτύου OPAP Store App",
+    "average usage": "Μέση διάρκεια χρήσης της εφαρμογής OPAP Store App",
+    "hh:mm": "Ώρες : Λεπτά",
+
+    "visitors today": "Επισκέπτες σήμερα",
+    "visitor last week": "Επισκέπτες της αντίστοιχης ημέρας της προηγούμενης εβδομάδας",
+    "visitors per period": "Επισκέπτες ανά περίοδο",
+    "popular day": "Πιο δημοφιλής ημέρα",
+    "wednesday": "Τετάρτη",
+    "number of visitors": "Μέγιστος αριθμός επισκεπτών ανά ώρα",
+
+    "unique users": "Μοναδικοί χρήστες της εφαρμογής OPAP Store App",
+    "total usage": "Συνολικός χρόνος χρήσης της εφαρμογής OPAP Store App",
+    "average usage time": "Μέσος χρόνος χρήσης της εφαρμογής OPAP Store App",
+    "bluetooth devices": "Συσκευές Bluetooth",
+    "date of last use": "Ημερομηνία τελευταίας χρήσης",
+    "store code": "Κωδικός καταστήματος",
+    "device number": "Αριθμός συσκευών",
+    "floors": "Αριθμός ορόφων",
+    "store info": "Bespot Πληροφορίες Καταστήματος",
+    "active": "Ενεργό",
+    "hours": "Ώρες",
+    "floor": "Όροφος/οι"
+}

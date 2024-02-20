@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import chartjs from 'chart.js/auto';
+  import { _ } from 'svelte-i18n';
 
   let hours = [];
   for(let i = 7; i <= 23; i++) {
@@ -20,15 +21,16 @@
       data: {
         labels: hours,
         datasets: [{
-          label: 'Visitors Today',
+          label: $_('visitors today'),
           data: countsToday,
-          borderColor: 'blue',
+          borderColor: '#FF2962',
           pointRadius: 0,
           fill: false
         }, {
-          label: 'Visitors of the corresponding day of the previous week',
+          label: $_('visitor last week'),
           data: countsPreviousWeek,
-          borderColor: 'green',
+          borderColor: '#FFDAE5',
+          backgroundColor: 'rgba(255, 218, 229, 0.5)',
           pointRadius: 0,
           fill: true
         }]
@@ -47,25 +49,22 @@
       data: {
         labels: days,
         datasets: [{
-          label: 'Visitors per selected period-100694',
+          label: $_('visitors per period'),
           data: counts,
-          borderColor: 'blue',
+          borderColor: '#FF2962',
+          backgroundColor: 'rgba(255, 41, 98, 0.5)',
           pointRadius: 0,
-          fill: false
+          fill: true
         }]
-      },
-      options: {
-        title: {
-          display: true,
-          text: 'Visitors per selected period-100694'
-        }
       }
     });
   });
 
-  let weeks = ['Week 6', 'Week 7'];
   let week6Data = [3,6,7,5,3,5,6];
   let week7Data = [3,4,6,8,5,3,2];
+
+  // find max value of sum of all arrays
+  let maxValue =  Math.max(...week6Data) + Math.max(...week7Data);
   let barchart;
 
   onMount(async () => {
@@ -77,19 +76,18 @@
         datasets: [{
           label: 'Week 6',
           data: week6Data,
-          backgroundColor: 'rgba(75, 192, 192, 0.2)',
-          borderColor: 'rgba(75, 192, 192, 1)',
+          backgroundColor: '#FF2962',
         }, {
           label: 'Week 7',
           data: week7Data,
-          backgroundColor: 'rgba(153, 102, 255, 0.2)',
-          borderColor: 'rgba(153, 102, 255, 1)',
+          backgroundColor: '#FFDAE5',
         }]
       },
       options: {
         scales: {
-          xAxes: [{ stacked: true }],
-          yAxes: [{ stacked: true }]
+          y: {
+            max:  maxValue + 5,
+          }
         }
       }
     });
@@ -112,33 +110,35 @@
 
       <!-- Second item -->
       <div class="col-span-2">
-        <div class="bg-white shadow-lg rounded-2xl p-5 flex justify-center items-center" style="height: 400px;">
+        <div class="bg-white shadow-lg rounded-2xl p-5 flex justify-center items-center" style="height: 100%;">
           <canvas bind:this={linechart2}></canvas>
         </div>
       </div>
 
     <!-- Third item -->
-    <div class="col-span-1">
-      <div class="bg-white shadow-lg rounded-2xl flex justify-center items-center" style="height: 400px;">
-        <canvas id="myChart"></canvas>
+    <div class="col-span-1 bg-white shadow-lg rounded-2xl p-5 flex justify-center items-center" style="height: 100%;">
+      <div class="text-center">
+        <p class="text-md text-black mt-2">{$_('popular day')}</p>
+        <h2 class="font-bold text-2xl mt-5" style="color: #FF2962;">{$_('wednesday')}</h2>
       </div>
     </div>
   </div>
 
   <div class="grid grid-cols-3 gap-10 m-10">
       <!-- Second item -->
-      <div class="col-span-1">
-        <div class="bg-white shadow-lg rounded-2xl p-3 flex justify-center items-center" style="height: 400px;">
-          <canvas></canvas>
+      <div class="col-span-1 bg-white shadow-lg rounded-2xl p-5 flex justify-center items-center" style="height: 100%;">
+        <div class="text-center">
+          <p class="text-md text-black mt-2">{$_('number of visitors')}</p>
+          <h2 class="font-bold text-2xl mt-5" style="color: #FF2962;">27</h2>
         </div>
       </div>
 
     <!-- Third item -->
     <div class="col-span-2">
-      <div class="bg-white shadow-lg rounded-2xl p-5 flex justify-center items-center pt-10" style="height: 400px;">
-        <canvas bind:this={barchart} id="myChart">
+      <div class="bg-white shadow-lg rounded-2xl p-5 flex justify-center items-center pt-10" style="height: 100%;">
+        <canvas bind:this={barchart}/>
       </div>
     </div>
   </div>
 
-  </main>
+</main>

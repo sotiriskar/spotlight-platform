@@ -1,14 +1,19 @@
 <script>
-  import Overview from './components/overview.svelte';
   import LeftSideBar from './components/leftSideBar.svelte';
   import TopNavBar from './components/topNavBar.svelte';
+  import Settings from './components/settings.svelte';
+  import Overview from './components/overview.svelte';
   import Traffic from './components/traffic.svelte';
   import Store from './components/store.svelte';
   import Area from './components/area.svelte';
   import { leagueTable } from '$lib/stores.js';
+  import { init, _ } from 'svelte-i18n';
+  import '../lib/index.js';
+
+  init({ fallbackLocale: 'en' });
 </script>
 
-<!-- white -->
+
 <div id="wrapper"  style="background-color: #dfe3ee;">
   <div class="flex">
     <LeftSideBar />
@@ -22,8 +27,10 @@
         <Traffic />
       {:else if $leagueTable === 'store'}
         <Store />
+      {:else if $leagueTable === 'settings'}
+        <Settings />
       {:else}
-        <p>Page not found</p>
+        <p>{$_('page not found')}</p>
       {/if}
     </div>
   </div>
