@@ -20,7 +20,6 @@
         data: {
             labels: linechartLabels,
             datasets: [{
-              // must be changed to "PLAYING AREA 1", "PLAYING AREA 2", "PLAYING AREA 3", "PLAYING AREA 4", "OUT", "KINO AREA 6"
                 label: 'PLAYING AREA 1',
                 data: playingArea1
             }
@@ -45,7 +44,7 @@
     });
   });
 
-  // make polar area chart for "PLAYING AREA 1", "PLAYING AREA 2", "PLAYING AREA 3", "PLAYING AREA 4", "OUT", "KINO AREA 6"
+
   let polarAreaChartValues = [20, 17, 13, 10, 5, 3];
   let polarAreaChartLabels = ['PLAYING AREA 1', 'PLAYING AREA 2', 'PLAYING AREA 3', 'PLAYING AREA 4', 'OUT', 'KINO AREA 6'];
   let polarAreaChart;
@@ -122,30 +121,26 @@
 </script>
 
 <main>
-  <div class="grid grid-cols-4 gap-10 mt-10 ml-10 mr-10">
-    <div class="col-span-4">
+  <div class="grid grid-cols-4 gap-10 m-10">
 
-      <!-- First item -->
-      <div class="bg-white shadow-lg rounded-2xl flex justify-center items-center" style="height: 400px;">
-        <canvas bind:this={barchart2} id="myChart"></canvas>
+    <!-- First item -->
+    <div class="col-span-4 bg-white shadow-lg rounded-2xl flex justify-center items-center p-10" style="height: 100%;">
+      <canvas bind:this={barchart2}></canvas>
     </div>
 
-    </div>
   </div>
-  <div class="grid grid-cols-3 gap-4 m-10">
-    <div class="col-span-2">
 
-      <!-- Second item -->
-      <div class="bg-white shadow-lg rounded-2xl p-3 flex justify-center items-center" style="height: 400px;">
-        <canvas bind:this={linechart} id="myChart"></canvas>
-      </div>
+  <div class="grid grid-cols-6 gap-10 m-10">
 
+    <!-- Second item -->
+    <div class="col-span-4 bg-white shadow-lg rounded-2xl p-5 flex justify-center items-center" style="height: 100%;">
+      <canvas bind:this={linechart}></canvas>
     </div>
-    <div class="col-span-1">
 
-      <!-- Third item -->
-      <div class="bg-white shadow-lg rounded-2xl flex justify-center items-center" style="height: 400px;">
-        <canvas bind:this={polarAreaChart} id="myChart"></canvas>
+
+    <!-- Third item -->
+    <div class="col-span-2 bg-white shadow-lg rounded-2xl flex justify-center items-center" style="height: 100%;">
+       <canvas bind:this={polarAreaChart} id="myChart"></canvas>
     </div>
   </div>
 </main>

@@ -3,81 +3,94 @@
 </script>
 
 
+<!-- height as screen -->
 <main>
-    <div class="grid grid-cols-3 gap-10 mt-10 ml-10 mr-10">
-      <div class="col-span-1">
-  
-        <!-- First item -->
-        <div class="bg-white shadow-lg rounded-2xl p-10" style="height: 400px;">
-            <table class="w-full max-w-4xl mx-auto overflow-hidden bg-white divide-y divide-gray-300 rounded-lg">
-                <thead>
-                    <tr>
-                        <th>Opap Store App users - Unique Users</th>
-                    </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td style="font-size: 2em;">2447 Users</td>
-                  </tr>
-                </tbody>
-            </table>
-        </div>
+  <div class="grid grid-cols-3 gap-10 mt-10 ml-10 mr-10" style="height: 40%;">
 
-        </div>
-      <div class="col-span-1">
-  
-        <!-- Second item -->
-        <div class="bg-white shadow-lg rounded-2xl p-10" style="height: 400px;">
-            <table class="w-full max-w-4xl mx-auto overflow-hidden bg-white divide-y divide-gray-300 rounded-lg">
-                <thead>
-                    <tr>
-                        <th>Opap Store App Usage Time - Total Usage</th>
-                    </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td style="font-size: 2em;">1653 hours</td>
-                  </tr>
-                </tbody>
-            </table>
-        </div>
-  
+    <!-- First item -->
+    <div class="col-span-1 bg-white shadow-lg rounded-2xl p-5 flex justify-center items-center" style="height: 100%;">
+      <div class="text-center">
+        <p class="text-md text-black mt-2">OPAP Store App Users Unique Users</p>
+        <h2 class="font-bold text-2xl text-black mt-5">2447 Users</h2>
       </div>
-        <div class="col-span-1">
-    
-            <!-- Third item -->
-            <div class="bg-white shadow-lg rounded-2xl p-10" style="height: 400px;">
-                <table class="w-full max-w-4xl mx-auto overflow-hidden bg-white divide-y divide-gray-300 rounded-lg">
-                    <thead>
-                        <tr>
-                            <th>Opap Store App Average Usage Time - Average Usage</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                        <td style="font-size: 2em;">00:08 hours:minutes</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+    </div>
 
-    </div>
-    <div class="grid grid-cols-3 gap-4">
-      <div class="col-span-2">
-      </div>
-      <div class="col-span-1">
-        <!-- Fifth item -->
-    </div>
-    <div class="grid grid-cols-3 gap-4">
-      <div class="col-span-1">
-        <!-- Sixth item -->
-      </div>
-      <div class="col-span-1">
-        <!-- Seventh item -->
-      </div>
-      <div class="col-span-1">
-        <!-- Eighth item -->
+    <!-- Second item -->
+    <div class="col-span-1 bg-white shadow-lg rounded-2xl p-5 flex justify-center items-center" style="height: 100%;">
+      <div class="text-center">
+        <p class="text-md text-black mt-2">Opap Store App Usage Time - Total Usage</p>
+        <h2 class="font-bold text-2xl text-black mt-5">1653 hours</h2>
       </div>
     </div>
-  </main>
-  
+
+    <!-- Third item -->
+    <div class="col-span-1 bg-white shadow-lg rounded-2xl p-5 flex justify-center items-center" style="height: 100%;">
+      <div class="text-center">
+        <p class="text-md text-black mt-2">Opap Store App Average Usage Time - Average Usage</p>
+        <h2 class="font-bold text-2xl text-black mt-5">00:08 hours : minutes</h2>
+      </div>
+    </div>
+  </div>
+
+    <div class="grid grid-cols-4 gap-10 mt-10 mb-10 ml-10 mr-10">
+
+      <!-- Fourth item -->
+      <div class="col-span-2 grid-rows-2 bg-white shadow-lg rounded-2xl p-5 flex justify-center items-center" style="height: 100%;">
+        <table class="text-black max-w-4xl mx-auto overflow-hidden bg-white rounded" style="height: 100%; width: 100%;">
+          <thead>
+            <tr>
+              <th class="border border-gray-300 p-2">Bluetooth device</th>
+              <th class="border border-gray-300 p-2">Date of last use</th>
+              <th class="border border-gray-300 p-2">Store Code</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td class="border border-gray-300 p-2 text-center">Beacon 1</td>
+                <td class="border border-gray-300 p-2 text-center">18/02/24</td>
+                <td class="border border-gray-300 p-2 text-center">100695</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-300 p-2 text-center">Beacon 2</td>
+                <td class="border border-gray-300 p-2 text-center">18/02/24</td>
+                <td class="border border-gray-300 p-2 text-center">100695</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-300 p-2 text-center">Beacon 3</td>
+                <td class="border border-gray-300 p-2 text-center">18/02/24</td>
+                <td class="border border-gray-300 p-2 text-center">100695</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-2 text-center">Beacon 4</td>
+              <td class="border border-gray-300 p-2 text-center">18/02/24</td>
+              <td class="border border-gray-300 p-2 text-center">100695</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+    <!-- Fifth item  -->
+    <div class="grid grid-cols-1 grid-rows-2 gap-10">
+      <div class="col-span-1 bg-white shadow-lg rounded-2xl p-5 flex justify-center items-center" style="height: 100%;">
+        <div class="text-center">
+          <p class="text-md text-black mt-2">Device Number Store Info</p>
+          <h2 class="font-bold text-2xl text-black mt-5">3 Beacons</h2>
+        </div>
+      </div>
+
+      <div class="col-span-1 bg-white shadow-lg rounded-2xl p-5 flex justify-center items-center" style="height: 100%;">
+        <div class="text-center">
+          <p class="text-md text-black mt-2">No. of Floors Store Information-100695</p>
+          <h2 class="font-bold text-2xl text-black mt-5">1 Floor(s)</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-span-1 grid-rows-2 bg-white shadow-lg rounded-2xl p-5 flex justify-center items-center" style="height: 100%;">
+      <div class="text-center">
+        <p class="text-md text-black mt-2">bespot service Store info</p>
+        <h2 class="font-bold text-2xl text-black mt-5">Active</h2>
+      </div>
+    </div>
+  </div>
+</main>

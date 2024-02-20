@@ -15,9 +15,12 @@
 				type: 'bar',
 				data: {
 						labels: chartLabels,
+            // color
+
 						datasets: [{
-								label: 'Users Per Period',
-								data: barchartValues
+								label: 'Users',
+								data: barchartValues,
+                backgroundColor: '#FF2962'
 						}]
 				},
         options: {
@@ -25,6 +28,15 @@
           scales: {
             y: {
               max:  maxValue2 + 20,
+            }
+          },
+          plugins: {
+            legend: {
+              display: true,
+              title: {
+                display: true,
+                text: 'Users Per Period'
+            },
             }
           }
         }
@@ -35,86 +47,42 @@
 
 <main>
   <div class="grid grid-cols-5 grid-rows-2 gap-10 mt-10 ml-10 mr-10 mb-10">
-    <div class="col-span-1">
 
-        <!-- First item -->
-        <div class="bg-white shadow-lg rounded-2xl p-10" style="height: 100%;">
-          <table class="w-full max-w-4xl mx-auto overflow-hidden bg-white divide-y divide-gray-300 rounded-lg">
-              <thead>
-                  <tr>
-                      <th>Comparison of usage with network Users OPAP Store App-100695</th>
-                  </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td style="font-size: 1em;">You are in the lowest ranking
-                    in minutes of use</td>
-                </tr>
-              </tbody>
-          </table>
-        </div>
+    <!-- First item -->
+    <div class="col-span-1 bg-white shadow-lg rounded-2xl p-5 max-w-md mx-auto flex justify-center items-center" style="height: 100%;">
+      <div class="text-center">
+        <p class="text-md text-black mt-2">Comparison of usage with network Users OPAP Store App</p>
+        <h2 class="font-bold text-lg mt-5" style="color: #FF2962;">You are in the lowest ranking in minutes of use</h2>
+      </div>
     </div>
 
     <!-- Second item -->
-    <div class="col-span-3 row-span-2">
-      <div class="bg-white shadow-lg rounded-2xl p-3 flex justify-center items-center" style="height: 100%;">
-        <canvas bind:this={barchart} id="myChart" height="300%"></canvas>
+    <div class="col-span-3 row-span-2 bg-white shadow-lg rounded-2xl p-10 flex justify-center items-center" style="height: 100%; width: 100%; border-radius: 20px;">
+        <canvas bind:this={barchart} id="myChart" style="height: 100%; width: 100%;"></canvas>
+    </div>
+
+    <!-- Third item -->
+    <div class="col-span-1 bg-white shadow-lg rounded-2xl p-5 max-w-md mx-auto flex justify-center items-center" style="height: 100%;">
+      <div class="text-center">
+        <p class="text-md text-black mt-2">Today's App Users</p>
+        <h2 class="font-bold text-lg mt-5" style="color: #FF2962;">15 Users</h2>
       </div>
     </div>
 
-      <!-- Third item -->
-    <div class="col-span-1">
-      <div class="bg-white shadow-lg rounded-2xl p-10" style="height: 100%;">
-        <table class="w-full max-w-4xl mx-auto overflow-hidden bg-white divide-y divide-gray-300 rounded-lg">
-          <thead>
-            <tr>
-              <th>Today App users-100695</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="font-size: 2em;">15 Users</td>
-            </tr>
-          </tbody>
-        </table>
+    <!-- Fourth item -->
+    <div class="col-span-1 bg-white shadow-lg rounded-2xl p-5 max-w-md mx-auto flex justify-center items-center" style="height: 100%;">
+      <div class="text-center">
+        <p class="text-md text-black mt-2">Compare users with network Users OPAP Store App</p>
+        <h2 class="font-bold text-lg mt-5" style="color: #FF2962;">You tend to perform like the network average in number of users</h2>
       </div>
     </div>
 
-    <!-- Fourth item (new row) -->
-    <div class="col-span-1">
-      <div class="bg-white shadow-lg rounded-2xl p-10" style="height: 100%;">
-        <table class="w-full max-w-4xl mx-auto overflow-hidden bg-white divide-y divide-gray-300 rounded-lg">
-          <thead>
-            <tr>
-              <th style="font-size: .8em;">Compare users with network Users OPAP Store App-100695</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="font-size: 1em;">You tend to perform like the network average
-                in number of users</td>
-            </tr>
-          </tbody>
-        </table>
+    <!-- Fifth item -->
+    <div class="col-span-1 bg-white shadow-lg rounded-2xl p-5 max-w-md mx-auto flex justify-center items-center" style="height: 100%;">
+      <div class="text-center">
+        <p class="text-md text-black mt-2">Average usage Duration of usage OPAP Store App</p>
+        <h2 class="font-bold text-lg mt-5" style="color: #FF2962;">00:08 hours : minutes</h2>
       </div>
     </div>
 
-    <!-- Fifth item (new row) -->
-    <div class="col-span-1">
-      <div class="bg-white shadow-lg rounded-2xl p-10" style="height: 100%;">
-        <table class="w-full max-w-4xl mx-auto overflow-hidden bg-white divide-y divide-gray-300 rounded-lg">
-          <thead>
-            <tr>
-              <th>Average usage Duration of usage OPAP Store App-100695</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="font-size: 1em;">00:04
-                hours : minutes</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-  </div>
 </main>

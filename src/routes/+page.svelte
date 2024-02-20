@@ -8,8 +8,8 @@
   import { leagueTable } from '$lib/stores.js';
 </script>
 
-
-<div id="wrapper">
+<!-- white -->
+<div id="wrapper"  style="background-color: #dfe3ee;">
   <div class="flex">
     <LeftSideBar />
     <div class="flex flex-col w-full">
