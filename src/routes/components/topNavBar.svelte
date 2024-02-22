@@ -1,29 +1,12 @@
 <script>
   import { locale, init, register, _ } from 'svelte-i18n';
   import {leagueTable} from '$lib/stores.js';
-  import profileIcon from '../../../static/profile_icon.jpeg';
   import Icon from '@iconify/svelte';
-  import en from '../../en.json';
-  import gr from '../../gr.json';
 
   function handleClick(value) {
+    localStorage.setItem('leagueTable', value);
     leagueTable.set(value);
     window.scrollTo(0, 0);
-  }
-
-  let selectedOption = 'English';
-  const options = ['Ελληνικά', 'English'];
-
-  // Register the translation files
-  register('en', () => Promise.resolve(en));
-  register('gr', () => Promise.resolve(gr));
-
-  function selectOption(option) {
-    selectedOption = option;
-    // Map the option to the corresponding locale
-    const newLocale = option === 'English' ? 'en' : 'gr';
-    // Change the locale
-    locale.set(newLocale);
   }
 </script>
 

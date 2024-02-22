@@ -7,10 +7,20 @@
   import Store from './components/store.svelte';
   import Area from './components/area.svelte';
   import { leagueTable } from '$lib/stores.js';
+
   import { init, _ } from 'svelte-i18n';
   import '../lib/index.js';
 
-  init({ fallbackLocale: 'en' });
+  let initialLocale = 'en';
+  if (typeof window !== 'undefined') {
+    initialLocale = localStorage.getItem('locale') || 'en';
+  }
+
+  // init with localStorage or default to 'en'
+  init({
+    fallbackLocale: 'en',
+    initialLocale: initialLocale
+  });
 </script>
 
 

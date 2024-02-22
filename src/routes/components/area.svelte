@@ -11,7 +11,7 @@
   let ctx;
 
   let linechartLabels = ['Jan 5', 'Jan 6', 'Jan 7', 'Jan 8', 'Jan 9', 'Jan 10', 'Jan 11'];
-  let linechart;  
+  let linechart;
 
   onMount(async (promise) => {
       ctx = linechart.getContext('2d');
@@ -22,8 +22,7 @@
             datasets: [{
                 label: 'PLAYING AREA 1',
                 data: playingArea1
-            }
-            ,{
+            },{
                 label: 'PLAYING AREA 2',
                 data: playingArea2  
             },{
@@ -43,7 +42,6 @@
         }
     });
   });
-
 
   let polarAreaChartValues = [20, 17, 13, 10, 5, 3];
   let polarAreaChartLabels = ['PLAYING AREA 1', 'PLAYING AREA 2', 'PLAYING AREA 3', 'PLAYING AREA 4', 'OUT', 'KINO AREA 6'];
@@ -107,18 +105,18 @@
           responsive: true,
           scales: {
             x: {
-              stacked: true,
+              stacked: true
             },
             y: {
               stacked: true,
-
-              max:  maxValue3 + 20,
+              max:  maxValue3 + 20
             }
           }
         }
     });
 });
 </script>
+
 
 <main>
   <div class="grid grid-cols-4 gap-10 m-10">
@@ -127,7 +125,6 @@
     <div class="col-span-4 bg-white shadow-lg rounded-2xl flex justify-center items-center p-10" style="height: 100%;">
       <canvas bind:this={barchart2}></canvas>
     </div>
-
   </div>
 
   <div class="grid grid-cols-6 gap-10 m-10">

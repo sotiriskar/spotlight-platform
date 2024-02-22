@@ -34,8 +34,8 @@
               display: true,
               title: {
                 display: true,
-                text: $_('users per period'),
-            },
+                text: $_('users per period')
+              }
             }
           }
         }
