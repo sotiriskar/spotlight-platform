@@ -5,7 +5,7 @@
 
 
 <main>
-  <div class="grid grid-cols-3 gap-10 mt-10 ml-10 mr-10" style="height: 40%;">
+  <div class="grid grid-cols-3 gap-10" style="height: 40%; padding: 5% 5% 0 5%;">
 
     <!-- First item -->
     <div class="col-span-1 bg-white shadow-lg rounded-2xl p-5 flex justify-center items-center" style="height: 100%;">
@@ -32,7 +32,7 @@
     </div>
   </div>
 
-    <div class="grid grid-cols-4 gap-10 mt-10 mb-10 ml-10 mr-10">
+    <div class="grid grid-cols-4 gap-10" style="height: 40%; padding: 5% 5% 0 5%;">
 
       <!-- Fourth item -->
       <div class="col-span-2 grid-rows-2 bg-white shadow-lg rounded-2xl p-5 flex justify-center items-center" style="height: 100%;">

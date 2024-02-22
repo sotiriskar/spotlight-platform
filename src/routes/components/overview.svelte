@@ -24,6 +24,7 @@
 				},
         options: {
           responsive: true,
+          maintainAspectRatio: false,
           scales: {
             y: {
               max:  maxValue2 + 20,
@@ -45,7 +46,7 @@
 </script>
 
 <main>
-  <div class="grid grid-cols-5 grid-rows-2 gap-10 mt-10 ml-10 mr-10 mb-10">
+  <div class="grid grid-cols-5 grid-rows-2 gap-10" style="height: 100%; padding: 5%;">
 
     <!-- First item -->
     <div class="col-span-1 bg-white shadow-lg rounded-2xl p-5 max-w-md mx-auto flex justify-center items-center" style="height: 100%;">
@@ -56,7 +57,7 @@
     </div>
 
     <!-- Second item -->
-    <div class="col-span-3 row-span-2 bg-white shadow-lg rounded-2xl p-10 flex justify-center items-center" style="height: 100%; width: 100%; border-radius: 20px;">
+    <div class="col-span-3 row-span-2 bg-white shadow-lg rounded-2xl p-10 flex justify-center items-center" style="height: 100%;">
         <canvas bind:this={barchart} style="height: 100%; width: 100%;"></canvas>
     </div>
 
