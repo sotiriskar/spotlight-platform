@@ -7,13 +7,20 @@
   import Store from './components/store.svelte';
   import Area from './components/area.svelte';
   import { leagueTable } from '$lib/stores.js';
-
   import { init, _ } from 'svelte-i18n';
+  import { onMount } from 'svelte';
   import '../lib/index.js';
 
   let initialLocale = 'en';
   if (typeof window !== 'undefined') {
     initialLocale = localStorage.getItem('locale') || 'en';
+  }
+
+  // if loginSession is not set, redirect to login page
+  if (typeof window !== 'undefined') {
+    if (!sessionStorage.getItem('loginSession')) {
+      window.location.href = '/login';
+    }
   }
 
   // init with localStorage or default to 'en'
@@ -22,7 +29,6 @@
     initialLocale: initialLocale
   });
 </script>
-
 
 <div id="wrapper"  style="background-color: #dfe3ee;">
   <div class="flex">

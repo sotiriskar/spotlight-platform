@@ -2,6 +2,13 @@
     "settings": "Settings",
     "logout": "Log Out",
 
+    "password": "Password",
+    "login": "Login",
+    "forgot password": "Forgot Password?",
+    "invalid store": "Invalid Store Code",
+    "store required": "Store Code is required",
+    "invalid password": "Invalid Password",
+
     "overview": "Overview",
     "area": "Area Insights",
     "traffic": "Traffic",
