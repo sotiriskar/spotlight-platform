@@ -5,9 +5,8 @@
     "password": "Password",
     "login": "Login",
     "forgot password": "Forgot Password?",
-    "invalid store": "Invalid Store Code",
+    "invalid store": "Invalid Store Code or Password",
     "store required": "Store Code is required",
-    "invalid password": "Invalid Password",
 
     "overview": "Overview",
     "area": "Area Insights",

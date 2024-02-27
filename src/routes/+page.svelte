@@ -16,12 +16,14 @@
     initialLocale = localStorage.getItem('locale') || 'en';
   }
 
-  // if loginSession is not set, redirect to login page
-  if (typeof window !== 'undefined') {
-    if (!sessionStorage.getItem('loginSession')) {
-      window.location.href = '/login';
+  onMount(() => {
+    if (typeof window !== 'undefined') {
+      if (!sessionStorage.getItem('sessionid')) {
+        window.location.href = '/login';
+      }
     }
-  }
+  });
+
 
   // init with localStorage or default to 'en'
   init({

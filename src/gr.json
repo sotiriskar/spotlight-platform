@@ -5,9 +5,8 @@
     "password": "Κωδικός",
     "login": "Σύνδεση",
     "forgot password": "Ξεχάσατε τον κωδικό σας;",
-    "invalid store": "Μη έγκυρο κατάστημα",
+    "invalid store": "Μη έγκυρο κατάστημα ή κωδικός",
     "store required": "Απαιτείται κωδικός καταστήματος",
-    "invalid password": "Μη έγκυρος κωδικός",
 
     "overview": "Επισκόπηση",
     "area": "Περιοχές",
