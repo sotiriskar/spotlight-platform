@@ -1,26 +1,22 @@
 import { fail, redirect } from '@sveltejs/kit';
 
-/** @type {import('./$types').Actions} */
-export const actions = {
-	login: async ({ cookies, request }) => {
-        const data = await request.formData();
-        const store = data.get('store');
-        const password = data.get('password');
-
-		if (!store || !password) {
-			return fail(400, { store, missing: true });
-		}
-
-        // Check if the username and password are 'admin'
-        if (store !== 'admin' || password !== 'admin') {
-            return fail(400, { store, incorrect: true });
-        }
-
-        // If the credentials are correct, set the sessionid cookie
-        cookies.set('sessionid', 'admin', { path: '/' });
-
-		if (store === 'admin' && password === 'admin') {
-			return { success: true, redirect: '/'}
-		}
+export const load = ({ cookies }) => {
+    if (cookies.get('username')) {
+        throw redirect(307, '/');
     }
+};
+
+export const actions = {
+	login: async ({ request, cookies, url }) => {
+		const data = await request.formData();
+		const username = data.get('username');
+		const password = data.get('password');
+		if (!username || !password) {
+			return fail(400, { username, message: 'Missing username or password' });
+		} else if (password !== 'admin' || username !== 'admin') {
+            return fail(403, { username, message: 'Invalid username or password' });
+        }
+		cookies.set('username', username, { path: '/' });
+		throw redirect(303, url.searchParams.get('redirectTo') || '/');
+	}
 };

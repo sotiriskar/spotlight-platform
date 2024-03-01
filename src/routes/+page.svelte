@@ -8,22 +8,12 @@
   import Area from './components/area.svelte';
   import { leagueTable } from '$lib/stores.js';
   import { init, _ } from 'svelte-i18n';
-  import { onMount } from 'svelte';
   import '../lib/index.js';
 
   let initialLocale = 'en';
   if (typeof window !== 'undefined') {
     initialLocale = localStorage.getItem('locale') || 'en';
   }
-
-  onMount(() => {
-    if (typeof window !== 'undefined') {
-      if (!sessionStorage.getItem('sessionid')) {
-        window.location.href = '/login';
-      }
-    }
-  });
-
 
   // init with localStorage or default to 'en'
   init({
@@ -32,6 +22,9 @@
   });
 </script>
 
+<svelte:head>
+    <title>DashBoard</title>
+</svelte:head>
 <div id="wrapper"  style="background-color: #dfe3ee;">
   <div class="flex">
     <LeftSideBar />
