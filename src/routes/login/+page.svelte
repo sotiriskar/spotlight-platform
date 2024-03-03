@@ -1,5 +1,6 @@
 <script>
-  import logo from '$lib/assets/bespot_logo-01.png';
+  import logo from '$lib/assets/bespot-logo.png';
+  import background from '$lib/assets/login-bg.png';
 	import { page } from '$app/stores';
   import { _, init } from 'svelte-i18n';
 
@@ -22,7 +23,7 @@
     <title>Spotlight - Login</title>
 </svelte:head>
 <div class="font-asap flex items-center justify-center min-h-screen" 
-    style="background: url('/login_bg.png') no-repeat center center fixed;
+    style="background: url('/src/lib/assets/login-bg.png') no-repeat center center fixed;
           -webkit-background-size: cover;
           -moz-background-size: cover;
           -o-background-size: cover;
