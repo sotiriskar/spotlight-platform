@@ -48,6 +48,10 @@
           pointRadius: 0,
           fill: true
         }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
       }
     });
   });
@@ -70,6 +74,10 @@
           pointRadius: 0,
           fill: true
         }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
       }
     });
   });
@@ -98,6 +106,8 @@
         }]
       },
       options: {
+        responsive: true,
+        maintainAspectRatio: false,
         scales: {
           y: {
             max:  maxValue + 5,
@@ -121,10 +131,9 @@
         <!-- First item -->
         <div class="col-span-4">
           <div class="bg-white shadow-lg rounded-2xl p-10 flex justify-center items-center " style="height: 100%;">
-            <canvas bind:this={linechart}></canvas>
+            <canvas style="height: 50vh" bind:this={linechart}></canvas>
           </div>
         </div>
-    
       </div>
     
       <div class="grid grid-cols-3 gap-10 m-10">
@@ -132,36 +141,35 @@
           <!-- Second item -->
           <div class="col-span-2">
             <div class="bg-white shadow-lg rounded-2xl p-5 flex justify-center items-center" style="height: 100%;">
-              <canvas bind:this={linechart2}></canvas>
+              <canvas style="height: 40vh" bind:this={linechart2}></canvas>
             </div>
           </div>
     
         <!-- Third item -->
         <div class="col-span-1 bg-white shadow-lg rounded-2xl p-5 flex justify-center items-center" style="height: 100%;">
-          <div class="text-center">
+          <div class="text-center overflow-hidden">
             <p class="text-md text-black mt-2">{$_('popular day')}</p>
             <h2 class="font-bold text-2xl mt-5" style="color: #FF2962;">{$_('wednesday')}</h2>
           </div>
         </div>
       </div>
-    
-      <div class="grid grid-cols-3 gap-10 m-10">
+
+      <div class="grid grid-cols-3 gap-10 mb-10 mx-10">
           <!-- Second item -->
           <div class="col-span-1 bg-white shadow-lg rounded-2xl p-5 flex justify-center items-center" style="height: 100%;">
-            <div class="text-center">
+            <div class="text-center overflow-hidden">
               <p class="text-md text-black mt-2">{$_('number of visitors')}</p>
               <h2 class="font-bold text-2xl mt-5" style="color: #FF2962;">27</h2>
             </div>
           </div>
-    
+
         <!-- Third item -->
         <div class="col-span-2">
           <div class="bg-white shadow-lg rounded-2xl p-5 flex justify-center items-center pt-10" style="height: 100%;">
-            <canvas bind:this={barchart}/>
+            <canvas style="height: 30vh" bind:this={barchart}/>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </div>

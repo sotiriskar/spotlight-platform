@@ -54,6 +54,10 @@
                 data: kinoArea
             }
           ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
         }
     });
   });
@@ -72,6 +76,10 @@
                 data: polarAreaChartValues
             }
           ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
         }
     });
   });
@@ -118,6 +126,7 @@
         },
         options: {
           responsive: true,
+          maintainAspectRatio: false,
           scales: {
             x: {
               stacked: true
@@ -138,26 +147,23 @@
 <div id="wrapper"  style="background-color: #dfe3ee;">
   <div class="flex">
     <LeftSideBar />
-    <div class="flex flex-col w-full">
+    <div class="flex flex-col w-full h-full">
       <TopNavBar />
-      <div class="grid grid-cols-4 gap-10 m-10">
+      <div class="grid grid-cols-6 gap-10 m-10">
 
         <!-- First item -->
-        <div class="col-span-4 bg-white shadow-lg rounded-2xl flex justify-center items-center p-10" style="height: 100%;">
-          <canvas bind:this={barchart2}></canvas>
+        <div class="col-span-6 bg-white shadow-lg rounded-2xl p-10 w-full h-full">
+          <canvas style="height: 50vh" bind:this={barchart2}></canvas>
         </div>
-      </div>
-    
-      <div class="grid grid-cols-6 gap-10 m-10">
     
         <!-- Second item -->
-        <div class="col-span-4 bg-white shadow-lg rounded-2xl p-5 flex justify-center items-center" style="height: 100%;">
-          <canvas bind:this={linechart}></canvas>
+        <div class="col-span-4 bg-white shadow-lg rounded-2xl p-5">
+          <canvas style="height: 40vh" bind:this={linechart}></canvas>
         </div>
-    
+
         <!-- Third item -->
-        <div class="col-span-2 bg-white shadow-lg rounded-2xl flex justify-center items-center" style="height: 100%;">
-           <canvas bind:this={polarAreaChart}></canvas>
+        <div class="col-span-2 bg-white shadow-lg rounded-2xl">
+           <canvas style="height: 40vh" bind:this={polarAreaChart}></canvas>
         </div>
       </div>
     </div>
