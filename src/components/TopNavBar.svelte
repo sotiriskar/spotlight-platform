@@ -28,7 +28,7 @@
         </div>
           <ul tabindex="0" class="menu menu-sm dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box mt-2 w-40 bg-white">
             <li><a href="/settings">{$_('settings')}</a></li>
-            <li><a href="/?logout">{$_('logout')}</a></li>
+            <li><a href="/logout">{$_('logout')}</a></li>
           </ul>
       </div>
     </div>

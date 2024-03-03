@@ -18,9 +18,5 @@ export const actions = {
         }
 		cookies.set('username', username, { path: '/' });
 		throw redirect(303, url.searchParams.get('redirectTo') || '/');
-	},
-	logout: async ({ cookies }) => {
-		cookies.delete('username');
-		throw redirect(303, '/login');
 	}
 };

@@ -5,11 +5,3 @@ export const load = ({ cookies, url }) => {
 		throw redirect(307, `/login?redirectTo=${url.pathname}`);
 	}
 };
-
-export const actions = {
-    logout: async ({ cookies }) => {
-        console.log('logout');
-        cookies.delete('username', { path: '/' });
-        throw redirect(307, '/login');
-    }
-};
