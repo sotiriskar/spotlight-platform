@@ -19,7 +19,7 @@
 </script>
 
 <svelte:head>
-    <title>SpotLight - Login</title>
+    <title>Spotlight - Login</title>
 </svelte:head>
 <div class="font-asap flex items-center justify-center min-h-screen" 
     style="background: url('/login_bg.png') no-repeat center center fixed;

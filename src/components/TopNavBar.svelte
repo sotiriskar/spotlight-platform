@@ -1,13 +1,6 @@
 <script>
-  import {leagueTable} from '$lib/stores.js';
   import Icon from '@iconify/svelte';
   import { _ } from 'svelte-i18n';
-
-  function handleClick(value) {
-    localStorage.setItem('leagueTable', value);
-    leagueTable.set(value);
-    window.scrollTo(0, 0);
-  }
 
   export const logout = async () => {
     console.log('logout');
@@ -34,8 +27,8 @@
           </div>
         </div>
           <ul tabindex="0" class="menu menu-sm dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box mt-2 w-40 bg-white">
-            <li><a on:click={() => handleClick('settings')}>{$_('settings')}</a></li>
-            <li><a  on:click={logout}>{$_('logout')}</a></li>
+            <li><a href="/settings">{$_('settings')}</a></li>
+            <li><a href="/?logout">{$_('logout')}</a></li>
           </ul>
       </div>
     </div>
