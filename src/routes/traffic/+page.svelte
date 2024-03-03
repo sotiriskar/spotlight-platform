@@ -25,6 +25,11 @@
   let countsToday = [0, 4, 5, 6, 8, 7, 7, 12, 16, 18, 23, 25, 23, 20, 18, 15, 10, 8, 2, 1, 0]
   let countsPreviousWeek = [0, 2, 4, 6, 8, 10, 12, 12, 13, 15, 18, 18, 16, 14, 12, 10, 8, 6, 4, 2, 0]
 
+  // max value of countsToday and countsPreviousWeek
+  let maxValueToday = Math.max(...countsToday);
+  let maxValuePreviousWeek = Math.max(...countsPreviousWeek);
+  let maxValue3 = Math.max(maxValueToday, maxValuePreviousWeek);
+
   let ctx;
   let linechart;
 
@@ -52,6 +57,12 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        scales: {
+          y: {
+            beginAtZero: true,
+            max:  maxValue3 + 5,
+          }
+        }
       }
     });
   });
@@ -59,6 +70,9 @@
   let days = ['Feb 1', 'Feb 2', 'Feb 3', 'Feb 4', 'Feb 5', 'Feb 6', 'Feb 7'];
   let counts = [4, 6, 7, 10, 4, 6, 8];
   let linechart2;
+
+  // max value of counts
+  let maxValue2 = Math.max(...counts);
 
   onMount(async () => {
     ctx = linechart2.getContext('2d');
@@ -78,6 +92,12 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        scales: {
+          y: {
+            beginAtZero: true,
+            max:  maxValue2 + 5,
+          }
+        }
       }
     });
   });

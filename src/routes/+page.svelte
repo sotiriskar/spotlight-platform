@@ -67,9 +67,9 @@
     <div class="flex flex-col w-full h-full">
       <TopNavBar />
 
-      <div class="grid grid-cols-5 grid-rows-2 gap-10 m-10">
+      <div class="grid grid-cols-6 grid-rows-2 gap-10 m-10">
 
-          <!-- First item -->
+        <!-- First item -->
         <div class="col-span-1 bg-white shadow-lg rounded-2xl p-5 flex justify-center items-center w-full overflow-hidden" style="height: 40vh;">
           <div class="text-center overflow-hidden">
             <p class="text-md text-black mt-2">{$_('comparison of usage')}</p>
@@ -77,12 +77,12 @@
           </div>
         </div>
 
-      <!-- Second item -->
-        <div class="col-span-3 row-span-2 bg-white shadow-lg rounded-2xl p-10 flex justify-center items-center w-full h-full overflow-hidden">
-            <canvas bind:this={barchart}></canvas>
+        <!-- Second item -->
+        <div class="col-span-4 row-span-2 bg-white shadow-lg rounded-2xl p-10 flex justify-center items-center w-full h-full overflow-hidden">
+            <canvas class="w-full h-full" bind:this={barchart}></canvas>
         </div>
 
-      <!-- Third item -->
+        <!-- Third item -->
         <div class="col-span-1 bg-white shadow-lg rounded-2xl p-5 flex justify-center items-center w-full overflow-hidden" style="height: 40vh;">
           <div class="text-center overflow-hidden">
             <p class="text-md text-black mt-2">{$_('app users')}</p>
@@ -90,7 +90,7 @@
           </div>
         </div>
 
-      <!-- Fourth item -->
+        <!-- Fourth item -->
         <div class="col-span-1 bg-white shadow-lg rounded-2xl p-5 flex justify-center items-center w-full overflow-hidden" style="height: 40vh;">
           <div class="text-center overflow-hidden">
             <p class="text-md text-black mt-2">{$_('compare users')}</p>
@@ -98,7 +98,7 @@
           </div>
         </div>
 
-      <!-- Fifth item -->
+        <!-- Fifth item -->
         <div class="col-span-1 bg-white shadow-lg rounded-2xl p-5 flex justify-center items-center w-full overflow-hidden" style="height: 40vh;">
           <div class="text-center overflow-hidden">
             <p class="text-md text-black mt-2">{$_('average usage')}</p>

@@ -38,7 +38,7 @@
     <input type="password" name="password" placeholder="Password" class="block rounded-lg bg-gray-100 w-full border-0 p-2 my-4" />
     <p class="text-red-500 text-xs italic m-3">{form?.message || ''}</p>
     <div class="flex justify-between items-center">
-      <button type="submit" class="font-asap cursor-pointer text-white uppercase w-20 border-0 py-2 mt-2 ml-1 rounded-lg bg-red-500 hover:bg-red-600">{$_('login')}</button>
+      <button type="submit" class="font-asap cursor-pointer text-white w-20 border-0 py-2 mt-2 ml-1 rounded-lg bg-red-500 hover:bg-red-600">{$_('login')}</button>
       <a href="/forgot-password" class="text-sm text-red-500 hover:text-red-600">{$_('forgot password')}</a>
     </div>
   </form>
