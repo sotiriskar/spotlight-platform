@@ -1,11 +1,11 @@
 <script>
-  import LeftSideBar from './components/leftSideBar.svelte';
-  import TopNavBar from './components/topNavBar.svelte';
-  import Settings from './components/settings.svelte';
-  import Overview from './components/overview.svelte';
-  import Traffic from './components/traffic.svelte';
-  import Store from './components/store.svelte';
-  import Area from './components/area.svelte';
+  import LeftSideBar from '../components/LeftSideBar.svelte';
+  import TopNavBar from '../components/TopNavBar.svelte';
+  import Settings from '../components/Settings.svelte';
+  import Overview from '../components/Overview.svelte';
+  import Traffic from '../components/Traffic.svelte';
+  import Store from '../components/Store.svelte';
+  import Area from '../components/AreaInsights.svelte';
   import { leagueTable } from '$lib/stores.js';
   import { init, _ } from 'svelte-i18n';
   import '../lib/index.js';

@@ -4,8 +4,8 @@
   import {leagueTable} from '$lib/stores.js';
   import chartjs from 'chart.js/auto';
   import Icon from '@iconify/svelte';
-  import en from '../../en.json';
-  import gr from '../../gr.json';
+  import en from '../en.json';
+  import gr from '../gr.json';
 
   function handleClick(value) {
     leagueTable.set(value);

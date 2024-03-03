@@ -1,7 +1,18 @@
 <script>
   import logo from '$lib/assets/bespot_logo-01.png';
 	import { page } from '$app/stores';
-  import { _ } from 'svelte-i18n';
+  import { _, init } from 'svelte-i18n';
+
+  let initialLocale = 'en';
+  if (typeof window !== 'undefined') {
+    initialLocale = localStorage.getItem('locale') || 'en';
+  }
+
+  // init with localStorage or default to 'en'
+  init({
+    fallbackLocale: 'en',
+    initialLocale: initialLocale
+  });
 
 	export let form;
 	const redirectTo = $page.url.searchParams.get('redirectTo') || '/';
